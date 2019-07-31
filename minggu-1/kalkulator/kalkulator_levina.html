@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+		
+</head>
+<body>
+
+	<link rel="stylesheet" href="assets/css/kalkulato.css">
+
+	<div class="kontak">
+		<h3>Pertambahan</h3>
+	<input id="bil1" value="8"/><br/>
+	<input id="bil2" value="2"/><br/>
+	<input id="hasil"/><br/>
+	<button onclick="hitung()">Hitung</button>
+	</div>
+
+	<div class="kontak1">
+		<h3>perkalian</h3>
+	<input id="bil1" value="8"/><br/>
+	<input id="bil2" value="2"/><br/>
+	<input id="hasil1"/><br/>
+	<button onclick="perkalian()">Perkalian</button>
+	</div>
+
+	<div class="kontak2">
+		<h3>Pembagian</h3>
+	<input id="bil1" value="8"/><br/>
+	<input id="bil2" value="2"/><br/>
+	<input id="hasil2"/><br/>
+	<button onclick="pembagian()">Pembagian</button>
+	</div>
+
+	<script>
+		function hitung(){
+			var angka1 = parseInt(document.getElementById('bil1').value)
+			var angka2 = parseInt(document.getElementById('bil2').value)
+			var hasil = angka1+angka2;
+			document.getElementById('hasil').value = hasil;
+		}
+		function perkalian(){
+			var angka1 = parseInt(document.getElementById('bil1').value)
+			var angka2 = parseInt(document.getElementById('bil2').value)
+			var hasil = angka1*angka2;
+			document.getElementById('hasil1').value = hasil;
+		}
+		function pembagian(){
+			var angka1 = parseInt(document.getElementById('bil1').value)
+			var angka2 = parseInt(document.getElementById('bil2').value)
+			var hasil = angka1/angka2;
+			document.getElementById('hasil2').value = hasil;
+		}
+	</script>
+	
+</body>
+</html>
