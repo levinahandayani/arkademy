@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Toko Online Brand</title>
+	<style>
+
+		.item{	
+			flex: 1;
+			border-radius: 10px;
+			padding: 10px;
+			margin: 10px
+			text-indent: center;
+		}
+
+		.item:hover{
+			background: yellow;
+		}
+
+		body{
+			background-image: url();
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-color: violet;
+		}
+
+
+		#item-list{
+			display: flex; 
+			flex-wrap: wrap;
+		}
+
+		.item .gambar img{
+			width: 140px;
+			margin: 5px;
+			height: 150px;
+			border-radius: 10px;
+		}
+		.pemisah{
+			display: block;
+		}
+
+		#item-list div .warna::before{
+			color: black;
+			content: "warna;"
+		}
+		#item-list div .nama::before{
+			color: black;
+			content: "nama:"
+		}
+		#item-list div .ukuran::before{
+			color: black;
+			content: "ukuran:"
+		}
+		#item-list div .harga::before{
+			color: black;
+			content: "harga:"
+		}
+
+		.item{
+			flex: 1;
+			background-color: aqua;
+			border-radius: 7px;
+			padding: 10px;
+			margin: 10px;	
+		}
+		h1{
+			display: block;
+			font-size: 7em;
+			margin-block-start: 0.67em;
+    		margin-block-end: 1em;
+    		margin-inline-start: 0px;
+   			margin-inline-end: 0px;
+    		font-weight: 10;
+    		color: orange;
+    		background-color: gray;
+		}
+		
+		div{
+			display: block;
+		}
+		footer{
+			background-color: orange;
+			text-indent: 20px;
+			color: red;
+		}
+
+
+	</style>
+</head>
+
+<body>
+	<center>
+		<h1 class="judul">Brand Online</h1>
+	<div id="item-list"></div>
+	<script>
+	let item = [
+		{
+			"nama":"converse",
+			"ukuran":"40",
+			"warna":"putih",
+			"harga":"530.000.000",
+			"gambar":"converse.jpg"
+		},
+		{
+			"nama":"celana wanita",
+			"ukuran":"L",
+			"warna":"hitam putih",
+			"harga":"170.000.000",
+			"gambar":"celana.jpg"
+		},
+		{
+			"nama":"switer",
+			"ukuran":"L",
+			"warna":"hitam flower",
+			"harga":"250.000.000",
+			"gambar":"switer.jpg"
+		},
+		{
+			"nama":"sling bag",
+			"ukuran":"minim",
+			"warna":"hitam",
+			"harga":"100.000.000",
+			"gambar":"tas.jpg"
+		},
+		{
+			"nama":"kaos cowo",
+			"ukuran":"L",
+			"warna":"hitam",
+			"harga":"150.000.000",
+			"gambar":"ju.jpg"
+		},
+		{
+			"nama":"sepatu school",
+			"ukuran":"39,40,41",
+			"warna":"hitam",
+			"harga":"350.000.000",
+			"gambar":"tuu.jpg"
+		},
+		{
+			"nama":"tas school",
+			"ukuran":"minim",
+			"warna":"hitam",
+			"harga":"140.000.000",
+			"gambar":"tass.jpg"
+		},
+		{
+			"nama":"celana cowo",
+			"ukuran":"29",
+			"warna":"coklat susu",
+			"harga":"170.000.000",
+			"gambar":"cell.jpg"
+		},
+		{
+			"nama":"jaket levis",
+			"ukuran":"L",
+			"warna":"biru langit",
+			"harga":"400.000.000",
+			"gambar":"jaket.jpg"
+		},
+		{
+			"nama":"sepatu",
+			"ukuran":"39",
+			"warna":"hitam api",
+			"harga":"369.000.000",
+			"gambar":"sep.jpg"
+		},
+		{
+			"nama":"hodie",
+			"ukuran":"L",
+			"warna":"pink",
+			"harga":"200.000.000",
+			"gambar":"pink.jpg"
+		},
+		{
+			"nama":"kemeja",
+			"ukuran":"L",
+			"warna":"putih",
+			"harga":"210.000.000",
+			"gambar":"oss.jpg"
+		},
+		{
+			"nama":"switer",
+			"ukuran":"L",
+			"warna":"hitam",
+			"harga":"380.000.000",
+			"gambar":"yaa.jpg"
+		},
+		{
+			"nama":"celana",
+			"ukuran":"40",
+			"warna":"abu-abu",
+			"harga":"210.000.000",
+			"gambar":"cege.jpg"
+		},
+		{
+			"nama":"tote bag",
+			"ukuran":"medium",
+			"warna":"coklat",
+			"harga":"110.000.000",
+			"gambar":"tote.jpg"
+		},
+		{
+			"nama":"converse",
+			"ukuran":"40",
+			"warna":"merah",
+			"harga":"550.000.000",
+			"gambar":"vers.jpg"
+		},
+		{
+			"nama":"converse",
+			"ukuran":"39",
+			"warna":"pink full",
+			"harga":"569.000.000",
+			"gambar":"pinkk.jpg"
+		},
+		{
+			"nama":"jaket bomber",
+			"ukuran":"M",
+			"warna":"hijau tua",
+			"harga":"190.000.000",
+			"gambar":"bomber.jpg"
+		},
+		{
+			"nama":"tas eiger",
+			"ukuran":"Minim",
+			"warna":"hijau coklat",
+			"harga":"450.000.000",
+			"gambar":"eiger.jpg"
+		},
+		{
+			"nama":"switer eiger",
+			"ukuran":"L",
+			"warna":"abu-abu biru",
+			"harga":"250.000.000",
+			"gambar":"hodie.jpg"
+		},
+	];
+	for(x in item){
+		let namaItem = item[x].nama;
+		let ukuranItem = item[x].ukuran;
+		let warnaItem = item[x].warna;
+		let hargaItem = item[x].harga;
+		let gambarItem = item[x].gambar;
+
+		document.getElementById('item-list').innerHTML+="\
+		<div class='item'>\
+		<div class='gambar'><img src='"+gambarItem+"' alt=''/></div>\
+		<div class='nama'>"+namaItem+"</div>\
+		<div class='ukuran'>"+ukuranItem+"</div>\
+		<div class='warna'>"+warnaItem+"</div>\
+		<div class='harga'>"+hargaItem+"</div>\
+	</div>\
+	";
+		if(((x+1)/5)===3){
+			document.getElementById('item-list').innerHTML+="\
+			<div class='pemisah'></div>\
+			";
+		}
+	};
+		</script>
+		<footer>
+			<p> &copy; levina handayani,2019</p>
+		</footer>
+	</body>
+</html>
